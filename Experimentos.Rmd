@@ -1,0 +1,26 @@
+---
+title: "Experimentos"
+date: '2022'
+output: html_document
+---
+
+#### Realizar el experimento 10 veces y mostrar los resultados... el experimento consta de 4 bolas azules y 3 bolas verdes.
+```{r, echo=FALSE}
+bolas<-c(rep("Azul",4), rep("Verde",3))
+bolas
+```
+
+#### Extraer 5 bolas con resposición. Contar el número de bolas azules extraídas.
+```{r,echo=FALSE}
+n<-10
+E1C<-replicate(n,sum(sample(bolas,5,replace = TRUE) == "Azul"))
+E1C
+```
+
+#### Extraer 5 bolas sin reposición. Contar el número de bolas azules extraídas.
+```{r, echo=FALSE}
+n<-10
+E1S<-replicate(n,sum(sample(bolas,5,replace = FALSE)=="Azul"))
+E1S
+```
+

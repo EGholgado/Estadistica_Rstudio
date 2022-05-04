@@ -1,0 +1,15 @@
+---
+title: "Distribuciones"
+date: '2022'
+output: html_document
+---
+
+<!-- Hallar la z pequeña de la distribución normal -->
+```{r, echo=TRUE}
+qnorm(0.98, lower.tail=FALSE)
+```
+
+<!-- hallar la normalidad -->
+```{r, echo=TRUE}
+pnorm(1)
+```
