@@ -6,10 +6,35 @@ output: html_document
 
 <!-- Hallar la z pequeña de la distribución normal -->
 ```{r, echo=TRUE}
-qnorm(0.98, lower.tail=FALSE)
+qnorm(0, lower.tail=TRUE)
 ```
 
 <!-- hallar la normalidad -->
 ```{r, echo=TRUE}
-pnorm(1)
+pnorm(960,mean=32,sd=6)
+```
+
+<!-- hallar la exponencial -->
+```{r, echo=TRUE}
+pexp(q=0.5,rate=0.5,lower.tail=TRUE)
+```
+
+<!-- hallar la binomial -->
+```{r, echo=TRUE}
+pbinom(q=14,size=20,prob=0.778808,lower.tail=TRUE)
+```
+
+<!-- hallar la exponencial -->
+$$
+1-\sum_{k=0}^{6} e^{\frac{-7}{3}} \dfrac{(\frac{7}{3})^k}{k!}
+$$
+
+```{r, echo=TRUE}
+1-ppois(6,lambda=14/6)
+```
+
+```{r, echo=TRUE}
+##dpois(n,\lambda * t)*dpois(n,\lambda * t)/dpois(n,\lambda * t)
+
+(dpois(2,3)*dpois(16,6/8))/dpois(16,6/8)
 ```
