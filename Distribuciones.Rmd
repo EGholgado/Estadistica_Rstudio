@@ -5,7 +5,7 @@ output: html_document
 ---
 
 <!-- Hallar la z pequeña de la distribución normal -->
-```{r, echo=TRUE}
+```{r, echo=FALSE}
 qnorm(0, lower.tail=TRUE)
 ```
 
