@@ -4,6 +4,62 @@ date: '2022'
 output: html_document
 ---
 
+# Distribución binomial  
+
+#### Función de probabilidad
+```{r, echo=TRUE}
+dbinom(3,size=10,prob=0.2)
+```
+
+#### Función de distribución acumulada
+```{r, echo=TRUE}
+pbinom(3,size=10,prob=0.2)
+sum(dbinom(0:3,size=10,prob=0.2))
+```
+
+#### Función cuantil binomial
+```{r, echo=TRUE}
+qbinom(0.3,size=10,prob=0.2)
+```
+
+#### Generación de número pseudoaleatorios
+```{r, echo=TRUE}
+set.seed(2)
+rbinom(5,size=10,prob=0.2)
+```
+
+
+
+
+
+# Distribución geometrica
+
+#### Función de probabilidad
+```{r, echo=TRUE}
+dgeom(4,prob=0.2)
+```
+
+#### Función de distribución acumulada
+```{r, echo=TRUE}
+pgeom(4,prob=0.2)
+sum(dgeom(0:4,prob=0.2))
+```
+
+#### Función cuantil binomial
+```{r, echo=TRUE}
+qgeom(0.9,prob=0.2)
+```
+
+#### Generación de número pseudoaleatorios
+```{r, echo=TRUE}
+set.seed(2)
+rgeom(5,prob=0.2)
+```
+
+
+
+
+
 <!-- Hallar la z pequeña de la distribución normal -->
 ```{r, echo=FALSE}
 qnorm(0, lower.tail=TRUE)
@@ -17,11 +73,6 @@ pnorm(960,mean=32,sd=6)
 <!-- hallar la exponencial -->
 ```{r, echo=TRUE}
 pexp(q=0.5,rate=0.5,lower.tail=TRUE)
-```
-
-<!-- hallar la binomial -->
-```{r, echo=TRUE}
-pbinom(q=14,size=20,prob=0.778808,lower.tail=TRUE)
 ```
 
 <!-- hallar la exponencial -->
