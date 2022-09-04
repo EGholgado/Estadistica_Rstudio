@@ -29,9 +29,6 @@ rbinom(5,size=10,prob=0.2)
 ```
 
 
-
-
-
 # Distribución geometrica
 
 #### Función de probabilidad
@@ -57,6 +54,20 @@ rgeom(5,prob=0.2)
 ```
 
 
+# Distribución Poisson
+
+#### Función de probabilidad
+```{r, echo=TRUE}
+dpois(4,lambda=0.2)
+```
+
+#### Función de distribución acumulada
+```{r, echo=TRUE}
+ppois(4,lambda=0.2)
+sum(dpois(0:4,lambda=0.2))
+```
+
+
 
 
 
@@ -79,13 +90,3 @@ pexp(q=0.5,rate=0.5,lower.tail=TRUE)
 $$
 1-\sum_{k=0}^{6} e^{\frac{-7}{3}} \dfrac{(\frac{7}{3})^k}{k!}
 $$
-
-```{r, echo=TRUE}
-1-ppois(6,lambda=14/6)
-```
-
-```{r, echo=TRUE}
-##dpois(n,\lambda * t)*dpois(n,\lambda * t)/dpois(n,\lambda * t)
-
-(dpois(2,3)*dpois(16,6/8))/dpois(16,6/8)
-```
